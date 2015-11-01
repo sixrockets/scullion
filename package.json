@@ -1,0 +1,27 @@
+{
+  "name": "scullion",
+  "version": "0.0.1",
+  "description": "Multipurpose bot framework",
+  "main": "src/scullion.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sixrockets/scullion.git"
+  },
+  "keywords": [
+    "bot",
+    "framework"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sixrockets/scullion/issues"
+  },
+  "homepage": "https://github.com/sixrockets/scullion",
+  "dependencies": {
+    "parent-require": "^1.0.0",
+    "request-promise": "^1.0.2"
+  }
+}
