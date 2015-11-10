@@ -2,25 +2,30 @@
   "name": "scullion",
   "version": "0.0.1",
   "description": "Multipurpose bot framework",
-  "main": "src/scullion.js",
+  "main": "./dist/lib/index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run compile",
+    "test": "npm run compile && babel-node test/harness.js test/**/*.js",
+    "compile": "babel --optional selfContained --modules common --out-dir dist lib/**.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sixrockets/scullion.git"
+    "url": "git://github.com/sixrockets/scullion.git"
   },
   "keywords": [
     "bot",
     "framework"
   ],
-  "author": "",
+  "author": "Manuel Albarran <>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sixrockets/scullion/issues"
-  },
-  "homepage": "https://github.com/sixrockets/scullion",
+  "bugs": "http://github.com/sixrockets/scullion/issues",
   "dependencies": {
+    "babel-runtime": "^4.3.0"
+  },
+  "devDependencies": {
+    "tape": "^3.5.0",
+    "babel": "^4.3.0",
+    "glob": "^4.4.1",
     "parent-require": "^1.0.0",
     "request-promise": "^1.0.2"
   }
